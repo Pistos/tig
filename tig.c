@@ -1380,7 +1380,7 @@ static void
 add_builtin_run_requests(void)
 {
 	const char *cherry_pick[] = { "git", "cherry-pick", "%(commit)", NULL };
-	const char *commit[] = { "git", "commit", "-v", NULL };
+	const char *commit[] = { "git", "commit", NULL };
 	const char *gc[] = { "git", "gc", NULL };
 	struct {
 		enum keymap keymap;
