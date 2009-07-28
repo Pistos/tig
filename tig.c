@@ -1380,7 +1380,7 @@ static void
 add_builtin_run_requests(void)
 {
 	const char *cherry_pick[] = { "git", "cherry-pick", "%(commit)", NULL };
-	const char *commit[] = { "git", "commit", NULL };
+	const char *commit[] = { "git", "commit", "-v", NULL };
 	const char *gc[] = { "git", "gc", NULL };
 	struct {
 		enum keymap keymap;
@@ -7373,8 +7373,8 @@ parse_options(int argc, const char *argv[])
 			die("command too long");
 	}
 
-	if (!prepare_update(VIEW(request), custom_argv, NULL, FORMAT_NONE))                                                                        
-		die("Failed to format arguments"); 
+	if (!prepare_update(VIEW(request), custom_argv, NULL, FORMAT_NONE))
+		die("Failed to format arguments");
 
 	return request;
 }
